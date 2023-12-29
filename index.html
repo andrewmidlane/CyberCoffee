@@ -1,0 +1,170 @@
+<!-- khai phiên bản của html (ver5) cho browser -->
+<!DOCTYPE html>
+<!-- index: đặt tên index cho trang chủ của web hỗ trợ browser nhận biết được trang nào là trang trủ trong hệ thống website khi load web lên -->
+<!-- Ctrl + / : ghi chú -->
+<html>
+
+<head>
+
+    <!-- thẻ head chứa thông tin tên cho website -->
+
+    <!-- + browser UTF-8 báo trình duyệt loại ký tự hiển thị có dấu -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!-- meta description dùng để hổ trợ cho các công cụ tìm kiếm,mô tả thêm cho trang web -->
+
+    <meta name="description" content="mua đi ko là hết lượt">
+
+    <!-- end-user: hỗ trợ UX 
+        +SEO: hỗ trộ các công cụ tìm kiếm  -->
+
+    <title>Cybercoffee</title>
+
+</head>
+
+<body>
+
+    <!-- Hiển thị nội dung cho end-user (người sử dụng web) -->
+
+    <!-- heading chỉ có từ h1 -> h6 -->
+
+    <!-- heading sẽ nhỏ dần từ h1 -> h6  -->
+
+    <!-- 1 web chỉ có 1 h1  => quy định về chuẩn SEO -->
+
+    <!-- style giúp điền code css trực tiếp vào thẻ html -->
+
+    <h1 style="background-color: aqua ; color: white  ;  text-align: center  ; ">Cybersoftcoffee</h1>
+
+    <!-- Thẻ liên kết  -->
+    <!-- Liên kết nội -->
+    <a href="#">Home</a>
+
+    <a href="#menu">Menu</a>
+    <!-- Liên kết ngoại -->
+    <a href="https://food.grab.com/vn/vi/" target="_blank">Order</a>
+
+    <!-- px đơn vị thường dùng  -->
+
+    <hr style="height: 5px ; width: 500px ;  " noshade>
+
+    <h2 style="color:blanchedalmond; text-align: center;" id="About">About our cafe</h2>
+
+    <!-- (Lorem + số) giúp tạo văn bản giả lập ngẫu nhiên -->
+
+    <p> 
+        <b>
+
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum laudantium labore minima praesentium delectus
+            nulla voluptatibus, numquam ea optio!
+
+        </b>
+        <br>
+        <i>
+            Eaque, error asperiores inventore modi nisi voluptas similique ipsum consectetur rerum illum recusandae
+            consequatur eum? Labore, fugiat animi earum nostrum explicabo, possimus ut sunt, tenetur obcaecati deleniti
+            harum quisquam sed quaerat.
+        </i>
+        <b>
+            <i> Error, earum necessitatibus repellendus, perspiciatis amet quos beatae asperiores nemo aut odio vero
+                cupiditate voluptatibus provident. Asperiores architecto excepturi, odit, earum sunt vitae temporibus
+                minima magni
+            </i>
+        </b>
+        dolorem laboriosam, soluta saepe atque aspernatur unde quas illo aliquid rerum suscipit obcaecati voluptatibus
+        numquam? Sapiente aspernatur voluptatibus magnam exercitationem temporibus esse id hic.
+    </p>
+
+
+<!-- danh sách ko có thứ tự -->
+<ul>
+    <li>iteam 1</li>
+    <li>iteam 2</li>
+    <li>iteam 3</li>
+</ul>
+<!-- danh sách có thứ tự -->
+<ol  type="a">
+    <li>iteam 1</li>
+    <li>iteam 2</li>
+    <li>iteam 5</li>
+</ol>
+ 
+<!-- src chứa đường dẫn tới file -->
+ 
+<!-- đường dẫn tuyệt đối (khó khăn trong việc hiển thị nội dung)-->
+   <!-- tuyệt đối chỉ dùng cho file ngoài dự án -->
+ 
+  <!-- <img src="C:\Users\ADMIN\OneDrive\Tài liệu\Quang_Khai\front_end\Buoi_1\Image_buoi1\Image_buoi1\chilling-cafe-01.jpg" alt="">    -->
+
+<!-- đường dẫn tương đối -->
+
+<!-- ./ liệt kê các thư mục hoặc file cùng cấp hiện tại  -->
+
+<!-- 
+    alt dùng để mô tả hình 
+    end-user: web accessibility, người kiếm thị nghe mô tả hình. Sử dụng phần mềm đọc màn hình 
+    dev: giúp dev tìm được file hình bị lỗi
+    SEO:giúp tìm kiếm hình
+-->
+<img src="./img/chilling-cafe-01.jpg" alt="Cafe 1">
+
+<h2 id="menu">Menu</h2>
+
+<table border="5" align="center" style="height: 300px; width: 500px;">
+    <!-- hàng 1 -->
+    <tr>
+        <th colspan="2"
+        style="background-color: chocolate;"
+        >NAme</th>
+        <th>type</th>
+        <th>price</th>
+    </tr>
+    <tr>
+        <!-- hang 2 -->
+        <!-- emmet, ex: td*4 là 4 lần td -->
+        <td rowspan="4"
+        style="background-image: url(./img/chilling-cafe-11.jpg);"
+        >Traditional</td>
+        <td rowspan="2">Vietnamese</td>
+        <td>Hot</td>
+        <td>64000</td>
+    </tr>
+     </tr>
+     <!-- hang 3 -->
+        <!-- tạo emmet theo quan hệ cha con
+        tr>td*2 sẽ tạo ra như ở dưới  -->
+        <td>Cold</td>
+        <td>28000</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Milk coffee</td>
+        <td>Hot</td>
+        <td>38000</td>
+    </tr>
+    <tr>
+        <td>Cold</td>
+        <td>54000</td>
+    </tr>
+    <tr>
+        <td rowspan="3"
+        style="background-image: url(.//img/chilling-cafe-12.jpg);"
+        >expresso</td>
+        <td>American coffee</td>
+        <td rowspan="3">Hot</td>
+        <td>110000</td>
+    </tr>
+    <tr>
+        <td>Machiato</td>
+        <td rowspan="2">40000</td>
+    </tr>
+    <tr>
+        <td>Cappuchino</td>
+    </tr>
+
+</table>
+
+</body>
+
+
+</html>
